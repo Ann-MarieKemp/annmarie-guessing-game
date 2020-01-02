@@ -2,9 +2,18 @@
 div {
     color: white; 
     background-color:darkblue; 
-    width: 300px
+    margin: auto; 
+    width: 100%; 
+    text-align: left;
+    background-color: slategrey;  
 }
 h1 {
     border: dotted blue; 
     width: 600px; 
+    text-align: center; 
+    border-radius: 25px; 
+    margin: auto; 
+    width: 50%; 
+    font-family: Georgia; 
+    background-color: slategrey; 
 }
