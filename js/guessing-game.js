@@ -117,9 +117,15 @@ console.log(playGame);
 function getHintButton(){
     const hintButton = document.getElementById('hintButton');
     hintButton.addEventListener('click', () => {
+        let hintText = document.getElementById('hintyHint')
+        if(playGame.pastGuesses.length > 2){
+            console.log('getshere')
        let hintArray = playGame.provideHint();
-       let hintText = document.getElementById('hintyHint')
        hintText.innerHTML = `The answer is one of these three Numbers: ${hintArray[0]}, ${hintArray[1]}, or ${hintArray[2]}`
+        } else {
+            
+            hintText.innerHTML = `You can't have a hint yet- try another guess!`
+        }
     });
 }
 getHintButton();
