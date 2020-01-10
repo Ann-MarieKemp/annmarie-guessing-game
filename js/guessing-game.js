@@ -96,14 +96,13 @@ class Game{
     }
 
     provideHint(){
-        if(this.pastGuesses.length > 2){
+        
             let winningNum = this.winningNumber;
             let alt1 = generateWinningNumber();
             let alt2 = generateWinningNumber();
             let numsArray = [winningNum, alt1, alt2];
             let shuffedArray = shuffle(numsArray);
             return shuffedArray;
-        }
     }
 }
 
