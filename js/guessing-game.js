@@ -56,7 +56,7 @@ class Game{
 
     playersGuessSubmission(num){
         this.playersGuess = num;
-        if ( num < 1 || num > 100 || typeof num !== 'number'){
+        if ( num < 1 || num > 100 || typeof num !== 'number'|| Number.isNaN(num)){
             throw alert('That is an invalid guess.');
             
         }
@@ -118,18 +118,21 @@ function getHintButton(){
     const hintButton = document.getElementById('hintButton');
     hintButton.addEventListener('click', () => {
         let hintText = document.getElementById('hintyHint')
-        if(playGame.pastGuesses.length > 2){
+        if(playGame.pastGuesses.length > 3){
             console.log('getshere')
        let hintArray = playGame.provideHint();
        hintText.innerHTML = `The answer is one of these three Numbers: ${hintArray[0]}, ${hintArray[1]}, or ${hintArray[2]}`
-        } else {
+        } 
+        else {
             hintText.innerHTML = `You can't have a hint yet- try another guess!`
         }
     });
 }
 getHintButton();
-let count = 0; 
+
+
 function submitGuessAndClear(){
+    let count = 0; 
     const guessSubmit = document.getElementById('submit');
     guessSubmit.addEventListener('click', () =>{
         let guessIn = document.querySelector('.guessInput');
@@ -148,6 +151,7 @@ function submitGuessAndClear(){
 submitGuessAndClear();
 
 function newGameButton(){
+    let count = 0; 
     const newGameBut = document.getElementById('newGameButton');
     newGameBut.addEventListener('click', () => {
         playGame = newGame();
