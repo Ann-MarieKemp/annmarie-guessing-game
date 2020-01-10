@@ -123,7 +123,6 @@ function getHintButton(){
        let hintArray = playGame.provideHint();
        hintText.innerHTML = `The answer is one of these three Numbers: ${hintArray[0]}, ${hintArray[1]}, or ${hintArray[2]}`
         } else {
-            
             hintText.innerHTML = `You can't have a hint yet- try another guess!`
         }
     });
@@ -135,11 +134,15 @@ function submitGuessAndClear(){
     guessSubmit.addEventListener('click', () =>{
         let guessIn = document.querySelector('.guessInput');
         playGame.playersGuess = Number(guessIn.value);
-        guessIn.value = '';
-        count++;
-        document.getElementById(`guess${count}`).innerHTML = playGame.playersGuess
-        document.getElementById('hintyHint').innerHTML = playGame.playersGuessSubmission(playGame.playersGuess);
-        
+        guessIn.value = ''; 
+        let guessResult = playGame.playersGuessSubmission(playGame.playersGuess); 
+        if(guessResult !== 'You have already guessed that number.'){
+            count++;
+            document.getElementById(`guess${count}`).innerHTML = playGame.playersGuess
+            document.getElementById('hintyHint').innerHTML = guessResult;
+        } else{
+            document.getElementById('hintyHint').innerHTML = guessResult; 
+        }
     })
 }
 submitGuessAndClear();
@@ -154,7 +157,7 @@ function newGameButton(){
             document.getElementById(`guess${i}`).innerHTML = '-'; 
         }
         count = 0;
-        guessIn.value = '';
+        document.querySelector('.guessInput').value = ''; 
     })
 }
 newGameButton();
