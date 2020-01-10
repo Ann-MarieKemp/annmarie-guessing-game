@@ -1,19 +1,76 @@
 /* Write your CSS code in this file */
-div {
-    color: white; 
-    background-color:darkblue; 
-    margin: auto; 
-    width: 100%; 
-    text-align: left;
-    background-color: slategrey;  
+body{
+    background-color: white; 
+    font-family: 'Bubblegum Sans', Georgia, cursive; 
 }
-h1 {
-    border: dotted blue; 
-    width: 600px; 
+.container{
+    background-color: blanchedalmond; 
+    border: 5px solid rosybrown; 
+    width: 75%; 
+    margin: 0 auto; 
+    box-shadow: 3px 1px rosybrown;
+    border-radius: 20px;
+    padding-bottom: 40px; 
+}
+.header{
+    margin: 20px auto;
+    color: rosybrown; 
+    border: 3px solid rosybrown; 
+    border-radius: 20px; 
+    box-shadow: 3px 1px rosybrown; 
+    width: max-content; 
+    padding: 20px
+}
+.guessInput{
+    width: 50px; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 0 45%; 
+    margin-bottom: 20px; 
+    font-size: 30px; 
+    border: 3px solid rosybrown; 
+    box-shadow: 2px 3px rosybrown;  
     text-align: center; 
-    border-radius: 25px; 
-    margin: auto; 
-    width: 50%; 
-    font-family: Georgia; 
-    background-color: slategrey; 
+    background-color: blanchedalmond; 
+    color: rosybrown; 
+    
+}
+.buttonSpacing{
+    margin: 0 27%;
+}
+.buttons{
+    box-shadow: 3px 1px rosybrown; 
+    font-family: 'Bubblegum Sans';
+    color: rosybrown; 
+    background-color: blanchedalmond; 
+    border: 3px solid rosybrown; 
+    width: 150px;
+    padding: 5px;
+    border-radius: 10px; 
+    text-align: center; 
+    font-size: 17px;
+    margin-right: 5px; 
+    
+}
+.mainText{
+    color: rosybrown; 
+    font-size: 25px; 
+    text-align: center; 
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+    list-style: none;
+}
+.guesses{
+    text-align: left;
+    float: left; 
+    margin: 0 8%; 
+    font-size: 30px;
+    margin-top: -15px; 
+}
+
+.hintText{
+    font-size: 30px;
+}
+::placeholder{
+    color: rosybrown; 
 }
