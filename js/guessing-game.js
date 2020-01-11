@@ -79,7 +79,8 @@ class Game{
         else if (diffCalc < 50 && diffCalc > 25){
             outcome = `You're a bit chilly.`;
             
-        } else if (diffCalc < 100 && diffCalc > 50){
+        } else if (diffCalc < 100 && diffCalc >= 50){
+            console.log('getshere')
             outcome = `You're ice cold!`;
         } 
         return outcome;
