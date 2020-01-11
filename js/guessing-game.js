@@ -80,12 +80,12 @@ class Game{
             if (diffCalc < 10){
                 outcome = `You're burning up!`;
             }
-            else if (diffCalc < 25){
+            else if (diffCalc < 25 && diffCalc > 10){
                 outcome = `You're lukewarm.`;
             }
-            else if (diffCalc < 50){
+            else if (diffCalc < 50 && diffCalc > 25){
                 outcome = `You're a bit chilly.`;
-            } else if (diffCalc < 100){
+            } else if (diffCalc < 100 && diffCalc > 50){
                 outcome = `You're ice cold!`;
             }
         }
@@ -130,9 +130,8 @@ function getHintButton(){
 }
 getHintButton();
 
-
+let count = 0; 
 function submitGuessAndClear(){
-    let count = 0; 
     const guessSubmit = document.getElementById('submit');
     guessSubmit.addEventListener('click', () =>{
         let guessIn = document.querySelector('.guessInput');
@@ -151,7 +150,6 @@ function submitGuessAndClear(){
 submitGuessAndClear();
 
 function newGameButton(){
-    let count = 0; 
     const newGameBut = document.getElementById('newGameButton');
     newGameBut.addEventListener('click', () => {
         playGame = newGame();
@@ -162,7 +160,7 @@ function newGameButton(){
         }
         count = 0;
         document.querySelector('.guessInput').value = ''; 
-    })
+    });
 }
 newGameButton();
 
