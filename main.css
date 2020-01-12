@@ -39,9 +39,8 @@ body{
     
 }
 .buttonSpacing{
-    margin: 0 27%;
-    width: 475px; 
-    flex: auto; 
+    margin: 0 33%;
+    display: flex; 
 }
 .buttons{
     box-shadow: 3px 1px rosybrown; 
@@ -49,7 +48,7 @@ body{
     color: rosybrown; 
     background-color: blanchedalmond; 
     border: 3px solid rosybrown; 
-    width: 150px;
+    width: 200px;
     padding: 5px; 
     border-radius: 10px; 
     text-align: center; 
