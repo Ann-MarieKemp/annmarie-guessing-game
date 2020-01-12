@@ -82,3 +82,6 @@ body{
 ::placeholder{
     color: rosybrown; 
 }
+.guessList{
+    display: flex; 
+}
