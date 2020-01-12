@@ -40,6 +40,7 @@ body{
 }
 .buttonSpacing{
     margin: 0 27%;
+    width: 475px; 
     flex: auto; 
 }
 .buttons{
@@ -49,7 +50,7 @@ body{
     background-color: blanchedalmond; 
     border: 3px solid rosybrown; 
     width: 150px;
-    padding: 5px;
+    padding: 5px; 
     border-radius: 10px; 
     text-align: center; 
     font-size: 17px;
