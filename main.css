@@ -57,15 +57,19 @@ body{
     flex: auto;
     
 }
+
 .mainText{
     color: rosybrown; 
     font-size: 25px; 
     text-align: center; 
     margin-top: 15px; 
     margin-bottom: 5px; 
-    list-style: none;
-    flex: auto; 
+    list-style: none; 
 }
+.guessList{
+    display: flex; 
+}
+
 .guesses{
     text-align: left;
     float: left; 
@@ -76,12 +80,8 @@ body{
 }
 
 .hintText{
-    font-size: 30px;
-    flex: auto; 
+    font-size: 30px; 
 }
 ::placeholder{
     color: rosybrown; 
-}
-.guessList{
-    display: flex; 
 }
